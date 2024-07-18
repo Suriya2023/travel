@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @layer components{
+    .h-style{
+        @apply text-6xl font-bold hover:text-yellow-700 transition-all delay-150 duration-1000  bg-black text-red-500 text-center p-10 max-sm:bg-yellow-300 max-sm:text-black;
+    }
+} */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+    margin-right: 0.5rem;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-center {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.search-input {
+    width: 300px;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-right a {
+    margin-left: 1rem;
+    color: #000;
+    text-decoration: none;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+}
+
+.btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive navbar styles */
+.toggle-button {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+#bgak{
+    color: #ddd;
+    background-image: url(https://preview.colorlib.com/theme/passport/images/hero_1.jpg.webp);
+}
+@media (max-width: 768px) {
+    .navbar-center, .navbar-right {
+        display: none;
+    }
+    .toggle-button {
+        display: block;
+    }
+    .navbar {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-right.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: #fff;
+        width: 100%;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .navbar-right a, .navbar-right .btn {
+        margin: 1rem;
+    }
+}
